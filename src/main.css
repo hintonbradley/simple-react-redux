@@ -1,0 +1,105 @@
+body {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.mt-20 {
+    margin-top: 10px;
+}
+
+ul, ol {
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+    padding: 0;
+}
+
+.card {
+    width: 90%;
+    border-radius: 5px;
+    display: block;
+    margin: 4vw auto;
+    padding: 1vw 0;
+    max-width: 800px;
+}
+
+.card-light {
+    background: rgb(240, 238, 238);
+}
+
+.card-dark {
+    background: rgb(31, 31, 31);
+    color:rgb(240, 238, 238);
+}
+
+.center {
+    text-align: center;
+}
+
+.card .txt {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+p {
+    margin: 10px 0 10px;
+    line-height: 1.5;
+}
+
+/* p, ul, ol {
+    padding: 10px 15vw;
+} */
+
+/* p {
+    padding: 10px 15vw;
+} */
+
+img {
+    display: block;
+    margin: 1vw auto;
+}
+
+
+.landing-page {
+    margin-top: 100px;
+}
+
+.img-lg {
+    width: 80%;
+}
+
+.img-md {
+    width: 60%;
+}
+
+.img-sm {
+    width: 40%;
+    max-width: 700px;
+}
+
+.img-xs {
+    width: 20%;
+}
+
+hr {
+    margin: 10px auto;
+}
+
+.hr-md {
+    width: 50%;
+}
+
+li {
+    padding-left: 5%;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 600px) {
+    .img-md, .img-sm {
+        width: 90%;
+    }
+}

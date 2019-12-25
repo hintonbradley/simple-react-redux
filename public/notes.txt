@@ -1,0 +1,42 @@
+********
+*SET UP*
+********
+
+1. Create a new react app
+    $ create-react-app <title-of-app>
+
+2. Install redux and react-redux
+    $ npm install --save redux react-redux
+
+3. Start the server
+    $ npm start
+
+4. Delete everything inside src folder
+
+5. Inside the src folder, create an index.js file
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import App from './components/App';
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+
+6. Inside the src folder, create the components folder and inside that, create the App.js file.
+    import React from 'react';
+    import './App.css';
+
+    const App = () => {
+    return (
+        <div className="App">
+        <h1>App</h1>
+        </div>
+    );
+    }
+
+    export default App;
+
+********
+*ROUTER*
+********
+1. Install React Router library
+    $ npm install react-router-dom
+2. 

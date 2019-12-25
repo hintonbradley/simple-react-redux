@@ -1,0 +1,15 @@
+.react-structure ul {
+    max-width: 500px;
+}
+
+.redux-structure ul {
+    max-width: 300px;
+}
+
+.react-redux-structure ul {
+    max-width: 600px;
+}
+
+.react-redux-structure ol {
+    max-width: 600px;
+}
