@@ -1,4 +1,5 @@
 import React from 'react';
+import ListItem from './ListItem';
 // import songsListProps from '../img/songsListProps.jpg';
 // import songsListProps from '../../src/img/songsListProps.jpg';
 
@@ -20,7 +21,17 @@ class Instruction extends React.Component {
                         )
                     } else if (item.type==='header') {
                         return (
-                            <h3 key={`inst${i}`}>Header {item.text}</h3>
+                            <h3 className="center" key={`inst${i}`}>{item.text}</h3>
+                        )
+                    } else if (item.type==='list') {
+                        return (
+                            < ListItem text={item.listItems} />
+                        )
+                    } else if (item.type==='link') {
+                        return (
+                            <div className="txt">
+                                < a href={item.link}>{item.text}</a>
+                            </div>
                         )
                     }
                 })}

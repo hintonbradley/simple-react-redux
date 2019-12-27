@@ -28,10 +28,11 @@ ul, ol {
 
 .card-light {
     background: rgb(240, 238, 238);
+    background: #d1d1d1;
 }
 
 .card-dark {
-    background: rgb(31, 31, 31);
+    background: rgb(50, 50, 50);
     color:rgb(240, 238, 238);
 }
 
@@ -41,22 +42,13 @@ ul, ol {
 
 .card .txt {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 0 5vw;
 }
 
 p {
-    margin: 10px 0 10px;
     line-height: 1.5;
 }
-
-/* p, ul, ol {
-    padding: 10px 15vw;
-} */
-
-/* p {
-    padding: 10px 15vw;
-} */
 
 img {
     display: block;
