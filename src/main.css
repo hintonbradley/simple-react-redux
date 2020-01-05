@@ -60,6 +60,10 @@ img {
     margin-top: 100px;
 }
 
+.img-xl {
+    width: 95%;
+}
+
 .img-lg {
     width: 80%;
 }

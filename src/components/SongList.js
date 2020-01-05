@@ -3,12 +3,26 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 class SongList extends Component {
+    // Creating a helper function to map over the song list and return the JSX.
+    renderList() {
+        // This return statement will return the array of JSX elements:
+        return this.props.songs.map((song) => {
+            // This return statement will return each of the JSX elements in the new map array:
+            return (
+                <div className="item" key={song.title}>
+                    <div className="right floated content">
+                        <button className="ui button primary">Select</button>
+                    </div>
+            <div className="content"><b>{song.title}</b> - {song.artist}</div>
+                </div>
+            )
+        })
+    }
+
+    // Adding the render and return statement for our component:
     render () {
-        console.log(this.props)
         return (
-            <div className="SongList landing-page">
-                <h1>Song List</h1>
-            </div>
+        <div className="ui divided list">{this.renderList()}</div>
         )
     }
 }

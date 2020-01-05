@@ -115,6 +115,12 @@ function Instructions() {
                 {type:'image',text:'Connect-mapStateToProps method',classes:'img-md center', name:'connectwrapperComponent', alt:'Connect Component'}]}/>
             
             <Instruction card='light' obj= { [{type:'text',text:'Step 16: In the SongList component, edit the mapStateToProp function so the component only receives the state it needs from the Redux Store.'},{type: 'image', text:'This is an image', classes:'img-md center', name:'songsListProps', alt: 'Connect Instance 1'},{type: 'text', text:'The songs list now shows up as a component INSIDE the Song List Component (as seen in console).'}] } />
+
+            <Instruction card="light" obj={[{
+                type: 'text', text: 'Step 17: Create a list of songs to be displayed in teh UI. We first create a helper function to create out all the JSX using a map method on the song list we obtained from the State in the Redux Store.'},
+                {type:'text',text:'The first return statement in the helper function will return the completed array of JSX elements that the map method returns. The second return statement will return each of the JSX elements in the new map array.'},
+                {type:'image',text:'Displaying JSX list',name:'listItems',classes:'img-xl center'}
+            ]} />
         </div>
     );
 }
