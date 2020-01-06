@@ -101,10 +101,10 @@ function Instructions() {
             < Instruction card="light" obj= {[
                 {type:'text',text:'Step 15: Pass configuration to the Connect Component so it will constantly listen to ensure we can get up-to-date and correct data this component needs from our Redux Store (via the Provider).'},
                 {type:'text',text:'We first create a new method (by convention called the \'mapStateToProps\'), and call it using \'state\' from the Redux Store as an argument. Console.log state to view in console to confirm it\'s working, and return state once we\'re finished.'},
+                {type:'image',text:'Connect-mapStateToProps method',classes:'img-md center', name:'mapStateToProps', alt: 'Connect Instance 1'},
                 {type:'text',text:'Finally, we configure the connect function using this new mapStateToProps method as an argument in order to allow it to get the Redux State through the Provider component.'},
-                {type:'image',text:'Connect-mapStateToProps method',classes:'img-sm center', name:'connectInstance1', alt: 'Connect Instance 1'},
-                {type:'text',text:'Now if we look at the code below, the extra set of parenthesis (along with the argument for the returned function) calls the returned function. You can see in the console to the right that this is valid Javascript code.'},
-                {type:'image',text:'Connect-mapStateToProps method',classes:'img-sm center', name:'connectInstance2', alt: 'Connect Instance 2'},]} />
+                {type:'image',text:'Connect-mapStateToProps method',classes:'img-md center', name:'connectMethod', alt: 'Connect Instance 1'}
+            ]} />
 
             < Instruction card='dark' obj= { [
                 {type:'text',text:'Sidenote: The connect() method breakdown'},{type:'text',text:'The mapStateToProps method in the connect method returns a object of State from the Redux Store. The mapStateToProps method will take the State object (ALL of the data inside the Redux Store - i.e. all the songs AND the current selected song) and we\'re going to run a calculation that will make the data show up as props inside our (SongList) component.'},
@@ -120,6 +120,35 @@ function Instructions() {
                 type: 'text', text: 'Step 17: Create a list of songs to be displayed in teh UI. We first create a helper function to create out all the JSX using a map method on the song list we obtained from the State in the Redux Store.'},
                 {type:'text',text:'The first return statement in the helper function will return the completed array of JSX elements that the map method returns. The second return statement will return each of the JSX elements in the new map array.'},
                 {type:'image',text:'Displaying JSX list',name:'listItems',classes:'img-xl center'}
+            ]} />
+
+            <Instruction card="light" obj={[{
+                type: 'text', text: 'Step 18: We now need to import and wire up our Action Creator in order to be able to change the selected song when a song is clicked, and update it in the Redux store. So we first need to import the Action Creator...'},
+                {type:'image',text:'Import Action Creator',name:'importAC',classes:'img-md center'},
+                {type: 'text', text: 'We now need to pass the imported Action Creator into our Connect function as a second argument (as an object) so it can communicate with the Redux Store. Note: Since the key and value are identical, we can simply say "selectSong" in the object and it will be used as both key and value. Additionally, now selectSong will be passed in as a prop to our component.'},
+                {type:'image',text:'Wiring up Action Creator',name:'wiringAC',classes:'img-lg center'}
+            ]} />
+
+            <Instruction card = 'light' obj={[{
+                type: 'text', text: 'Step 19: We now need to add the functionality to our UI. So we add a click method to all the song buttons in our song list, so when a specific button is clicked, the corresponding song will be the current selected song.'},
+                {type:'image',text:'Adding AC functionality',name:'addingACFunctionality',classes:'img-lg center'},
+                {type:'text', text:'Note: Add a console.log to your mapStateToProps function to ensure state is being updated onClick.'},
+                {type:'image',text:'Verify AC Funcionality',name:'verifyACFunctionality',classes:'img-lg center'},
+            ]} />
+            <Instruction card = 'light' obj={[{
+                type: 'text', text: 'Step 20(kinda): Follow steps 13-16 to create a new component that will display the selected song information.'},
+                {type:'image',text:'Song Detail Component',name:'songDetailComponent',classes:'img-md center'},
+            ]} />
+            <Instruction card = 'light' obj={[{
+                type: 'text', text: 'Step 21: Add the SongDetail component to your main component.'},
+                {type:'image',text:'Song Detail Component',name:'addSongDetail',classes:'img-md center'},
+            ]} />
+            <Instruction card = 'light' obj={[{
+                type: 'text', text: 'Step 22: Clean up the SongDetails component to display infomration.'},
+                {type: 'text', text: 'First, instead of receiving the entire props object in our SongDetail component (as props) we destructurize the property or properties we care about.'},
+                {type:'image',text:'Destructuring props',name:'destructureProps',classes:'img-md center'},
+                {type: 'text', text: 'Second, add a check to see if there is a song being returned (and not null). If it is null, let user know they need to select a song. Otherwise, list the song details that is returned from the Redux Store.'},
+                {type:'image',text:'Selected Song Check',name:'selectedSongCheck',classes:'img-md center'}
             ]} />
         </div>
     );

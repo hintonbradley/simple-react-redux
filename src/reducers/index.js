@@ -5,11 +5,11 @@ import { combineReducers } from 'redux';
 // Step 1: Creating Reducers:
 const songsReducer = () => {
     return [
-        {title: 'Jump', artist: 'Van Halen', Album: '1984'},
-        {title: 'Big Time', artist: 'Peter Gabriel', Album: 'So'},
-        {title: 'Africa', artist: 'Toto', Album: 'Toto IV'},
-        {title: 'Fame', artist: 'Irene Cara', Album: 'Fame OST'},
-        {title: 'Never Tear Us Apart', artist: 'INXS', Album: 'Kick'}
+        {title: 'Jump', artist: 'Van Halen', album: '1984'},
+        {title: 'Big Time', artist: 'Peter Gabriel', album: 'So'},
+        {title: 'Africa', artist: 'Toto', album: 'Toto IV'},
+        {title: 'Fame', artist: 'Irene Cara', album: 'Fame OST'},
+        {title: 'Never Tear Us Apart', artist: 'INXS', album: 'Kick'}
     ]
 }
 
